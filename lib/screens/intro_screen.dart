@@ -22,32 +22,42 @@ class _IntroPageState extends State<IntroPage> {
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.end,
-                  children: [
-                    Text(
-                      "Fitness",
-                      style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 37,
-                          fontWeight: FontWeight.bold),
+                Transform.translate(
+                  offset: Offset(0, 20),
+                  child: Container(
+                    child: Column(
+                      children: [
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.end,
+                          children: [
+                            Text(
+                              "Fitness",
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 37,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                            Transform.translate(
+                              offset: Offset(0, 6),
+                              child: Text(
+                                "X",
+                                style: TextStyle(
+                                    color: Color(0xFFB9A9F4),
+                                    fontSize: 52,
+                                    fontWeight: FontWeight.bold),
+                              ),
+                            )
+                          ],
+                        ),
+                        Text(
+                          "Everybody Can Train",
+                          style: TextStyle(
+                              fontSize: 20, fontWeight: FontWeight.w300),
+                        )
+                      ],
                     ),
-                    Transform.translate(
-                      offset: Offset(0, 6),
-                      child: Text(
-                        "X",
-                        style: TextStyle(
-                            color: Color(0xFFB9A9F4),
-                            fontSize: 52,
-                            fontWeight: FontWeight.bold),
-                      ),
-                    )
-                  ],
-                ),
-                Text(
-                  "Everybody Can Train",
-                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.w300),
+                  ),
                 )
               ],
             ),
